@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sass Header Example
 
-## Available Scripts
+This repository contains examples for using Sass in a React app.
 
-In the project directory, you can run:
+## Notes
 
-### `npm start`
+1. Run `npm i node-sass` in the root of the project in order to process the scss files.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Create one 'master' scss file (App.scss is a good contender).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+3. Partials are files which contain scss snippets. They are good for compiling all your styling together in one place.
+    * Create a partial by naming a file in this pattern: `_filename.scss`
+    * Import partials into the 'master' scss file like this: `@import 'pathname/filename'`
+        * Note: do not use the `.scss` extention or the leading `_` when importing a partial
 
-### `npm test`
+4. Create variables with `$`.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Create mixins with `@mixin name(parameters) {}`
 
-### `npm run build`
+6. Extend styles from other classes with `@extend`.
+    * Create placeholder classes with `%`.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. Nest things, but be careful not to nest too deep as it makes your styling inflexible and is bad practice.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Other Resources
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There is a lot more you can do with Sass - this really is only the tip of the iceberg. Here are some articles you can read to learn more:
 
-### `npm run eject`
+* [Sass Basics Guide](https://sass-lang.com/guide)
+* [How to Use Sass Mixins](https://scotch.io/tutorials/how-to-use-sass-mixins)
+* [Advanced SCSS](https://gist.github.com/jareware/4738651)
+* [Official Sass Documentation](https://sass-lang.com/documentation)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
